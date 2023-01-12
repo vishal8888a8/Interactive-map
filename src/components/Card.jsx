@@ -10,6 +10,7 @@ export default function Card(props) {
             style={{
                 width: '4em',
                 height: '3em',
+                marginBottom:'0.3rem'
             }}
             title={props.item.code}
         />

@@ -181,6 +181,34 @@ const data = [
         country:"Canada",
         data:10,
     },
+    {
+        id:27,
+        cords:[23.784824,45.435973],
+        code:"SA",
+        country:"Saudi Arabia",
+        data:9,
+    },
+    {
+        id:28,
+        cords:[32.784824,53.435973],
+        code:"IR",
+        country:"Iran",
+        data:21,
+    },
+    {
+        id:29,
+        cords:[-14.784824,-51.435973],
+        code:"BR",
+        country:"Brazil",
+        data:25,
+    },
+    {
+        id:30,
+        cords:[-10.784824,-42.435973],
+        code:"BR",
+        country:"Brazil",
+        data:12,
+    }
 ]
 
 export default data;
