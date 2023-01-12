@@ -1,0 +1,62 @@
+.wraper{
+    width: 75%;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.label{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text{
+    width: 10%;
+}
+
+.color_container{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.item{
+    height: 0.8rem;
+    width: 25%;
+}
+
+.item1{
+    background-color: rgb(22, 22, 192);
+}
+.item2{
+    background-color: rgb(54, 54, 240);
+}
+.item3{
+    background-color:rgb(99, 99, 206);
+}
+.item4{
+    background-color:rgb(93, 151, 226)
+}
+
+
+/* 2nd label */
+.label2{
+    margin-top: 0.3rem;
+}
+
+.color_container2{
+    display: flex;
+    width:90%;
+    padding-left: 10%;
+}
+
+.item_small{
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.box{
+    height: 0.7rem;
+    width: 0.7rem;
+    margin-right: 0.5rem;
+}

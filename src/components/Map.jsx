@@ -1,26 +1,36 @@
 import React from 'react'
+import data from '../data/data'
+import Card from './Card'
 import { MapContainer,CircleMarker,Popup,TileLayer } from 'react-leaflet'
 
-const center = [61.505, 60.09]
-const colorOptions = { color: 'blue' }
-//r - 5 to 30
-
+const center = [30, 15]
 
 export default function Map() {
+
+  function colorhandle(radius)
+  {
+    if ( radius <= 8 )
+      return {color:'rgb(93, 151, 226)'};
+    else if ( radius <= 16 )
+      return {color:'rgb(37, 104, 191)'};
+    else if ( radius <= 24 )
+      return {color:'rgb(35, 35, 217)'}
+    else
+      return {color:'rgb(4, 4, 100)'}
+  }
+
   return (
     <div className='map'>
-        <MapContainer center={center} zoom={2} scrollWheelZoom={false}>
+        <MapContainer center={center} zoom={2} scrollWheelZoom={true}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
-            <CircleMarker center={center} pathOptions={colorOptions} radius={30}>
-                <Popup>Hi this is popup</Popup>
-            </CircleMarker>
-            <CircleMarker center={[20.593684,78.96288]} pathOptions={colorOptions} radius={20}>
-                <Popup><img src="https://i0.wp.com/blog.rebrandly.com/wp-content/uploads/2016/10/BITLY-API.jpg?resize=119%2C64&ssl=1" alt="US" /></Popup>
-            </CircleMarker>
-            <CircleMarker center={[40,-10]} pathOptions={colorOptions} radius={5}>
-                <Popup>Hi this is popup</Popup>
-            </CircleMarker>
-        </MapContainer>,
+            {data.map((item)=>
+                <CircleMarker className='Circleitem' center={item.cords} pathOptions={colorhandle(item.data)} radius={item.data} weight={1.7}>
+                    <Popup className='popup'>
+                    <Card item={item}/>
+                    </Popup>
+                </CircleMarker>
+            )}
+        </MapContainer>
     </div>
   )
 }

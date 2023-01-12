@@ -1,5 +1,11 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+}
+
 body{
-    font-family: 'Outfit', sans-serif;;
+    font-family: 'Outfit', sans-serif;
 }
 
 .dashboard{
@@ -10,6 +16,8 @@ body{
 
 .header{
     margin: auto;
+    margin-bottom: 0.6rem; 
+    margin-top: 0.5rem; 
 }
 
 .leaflet-container {
@@ -21,4 +29,17 @@ body{
 .map{
     display: flex;
     justify-content: center;
+    background: transparent;
+}
+
+.Circleitem{
+    border-radius: 100px;
+}
+
+.popup{
+    box-sizing: border-box;
+}
+
+.card{
+    text-align: center;
 }
